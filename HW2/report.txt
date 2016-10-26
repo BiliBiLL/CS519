@@ -1,0 +1,25 @@
+Which of the following sorting algorithms are (or can be made) stable?
+   (a) mergesort
+   (b) quicksort with the first element as pivot
+   (c) quicksort with randomized pivot
+   (d) selection sort
+   (e) insertion sort
+   (f) heap sort
+
+	(a) stable
+	(b) non-stable, can be made
+	(c)non-stable, can be made
+	(d)stable
+	(e)stable
+	(f)stable
+
+1. Approximately how many hours did you spend on this assignment?
+	1-2 hours per day, for three days
+2. Would you rate it as easy, moderate, or difficult?
+	moderate
+3. Did you work on it mostly alone, or mostly with other people?
+   Note you are encouraged to discuss with your classmates, 
+   but each students should submit his/her own code.
+	all alone for this one
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	80%

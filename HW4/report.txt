@@ -1,0 +1,45 @@
+0. There are two methods for building a heap from an unsorted array:
+   (1) insert each element into the heap  --- O(nlogn)
+   (2) heapify (top-down)                 --- O(n)
+
+   (a) (theoretically) Derive their time complexities.
+   (b) (empirically)   Use a long list of random numbers to show the difference in time.
+       		       What about sorted or reversely-sorted numbers?
+
+(a) 
+	(1)Insert one element need O(1), then the new inserted element may buble-up to the upper level, so the worst
+case for each element is O(logn), so for total n elements, the complexity if O(nlogn)
+	(2)For heapify, the mothed is buble-down, from upper level to the leaf, in tree structure,
+there are n//2 of nodes in the buttom level(or assume h as height of the tree, 2^h nodes exists in
+ the buttom level), those node just need downward operate for 1 time.
+So the total will be:
+	2^0*(log(n)-1)+2^1*(log(n)-2) + ...... + 2^(logn-1)*(log(n)-log(n)+1) = O(n)
+
+(b) For a long (100000) random list, for insertion is 0.1300002463466 heapify is 0.07723958312578
+the reverse one is 0.544031123848 and 0.051245168234
+
+2. k-way mergesort (the classical mergesort is a special case where k=2).
+
+   >>> kmergesort([4,1,5,2,6,3,7,0], 3) 
+   [0,1,2,3,4,5,6,7]
+
+   Q: What is the complexity? 
+   A: O(nk^2).
+
+
+Debriefing (required!): --------------------------
+
+1. Approximately how many hours did you spend on this assignment?
+	more than 4 in 5 days
+2. Would you rate it as easy, moderate, or difficult?
+	a little bit hard
+3. Did you work on it mostly alone, or mostly with other people?
+   Note you are encouraged to discuss with your classmates, 
+   but each students should submit his/her own code.
+	finish alone but discuss with people
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	60%
+5. Which part(s) of the course you like the most so far?
+	homework review
+6. Which part(s) of the course you dislike the most so far?
+	not at all

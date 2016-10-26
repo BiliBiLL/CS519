@@ -1,0 +1,38 @@
+Zehuan Chen
+chenzeh@oregonstate.edu
+
+
+
+0Q: In quick-sort, the best-case is O(nlogn), avg is also O(nlogn), the worst-case is O(n^2).
+For the best-case in quick-sort is not obvious, because no matter the input array is, the algorithm
+will still go through divide and conqure, even is the array is already in order.
+
+For the worst-case, if the pivot choose the one on the side of an array, there will definitely have 
+one side be empty, so the time complexity will be (n-1)+(n-2)+(n-3) ..... +2+1. The total will be 
+O(n^2)
+
+1Q: In quick-select, the best-case is O(n), the avg is O(n),the worst is O(n^2)
+the best-case and the avg-case is simialr, because every time the selection begin all start with partition and
+partition usually took O(n/2), in avg-case, the complexity can be shown as n/2 +n/4 +n/8 ... apx(0)
+, so the total will be O(2n) = O(n).
+For the worst-case, each time in partition section, we could be extremely unlucky and always partition around
+the largest remaining element, and partitioning takes O(n) and there is also have n-deepth,
+so the total will be O(n^2)
+
+
+2Q.
+qsort(): O(nlogn)
+sorted(): O(nlogn)
+search(): O(n)
+insert(): O()
+
+
+
+Debriefing
+1. I don't familiar with Python and this algorithm, so I took tree hours everyday since the HW1 posted.
+2. I think this homework is an appropriate diffculty task, It is not so hard, because we have references such as textbook and slides, which contains all the information we need to know.
+But we still need some time to understand the algorithm and master some python programming skills, which is time-consuming but very seful.
+3. I work this mostly alone, I just ask some question about python from classmate who familiar with this language.
+4. If the material you mention are textbook and slides, I think I can understand 80%, mostly.
+5. Just have a question, is these assignment the same rank as companies interview or lower?
+BTW, this course is very useful for me, it will not only let me review my understanding of some classic algorithms, but also working on a language that I am not familiar with.

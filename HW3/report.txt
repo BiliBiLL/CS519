@@ -1,0 +1,13 @@
+1. Approximately how many hours did you spend on this assignment?
+	1-2 hours each day, I spend 5 days
+2. Would you rate it as easy, moderate, or difficult?
+	I think there are a lot of bounday conditions I need find out in longest_sorted, which is pretty challenge.
+3. Did you work on it mostly alone, or mostly with other people?
+	I sometimes discuss with my friends, but I basically finish it alone
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	85%
+[UPDATE]
+5. Which part(s) of the course you like the most so far?
+	Everything is useful for me I think
+6. Which part(s) of the course you dislike the most so far?
+	not really

@@ -1,0 +1,35 @@
+0. Compare two recursive implementations of fib (naive vs. memoized).
+   (a) What's exact complexity of naive in theory?
+	T(n) = T(n-1)+T(n-2)+O(1), approxiamately O(2^n)
+   (b) Let's say you know it's O(a^n); can you curve-fit to determine the approximate value of a?
+	function f(x)=a*x+b (f(x) is log(y))
+   (c) Does this value match the theoretical complexity?
+	Yes
+1. [WILL BE GRADED]
+   Maximum Weighted Independent Set 
+
+   Q: What's the complexity?
+   A: O(n)
+
+2. Number of n-node BSTs
+   What's the complexity of this DP?
+   O(n^2)
+   What's the name of this famous number series?
+   Catalan number
+
+Debriefing (required!): --------------------------
+
+0. What's your name?
+Zehuan Chen
+1. Approximately how many hours did you spend on this assignment?
+4-5 hours per days
+2. Would you rate it as easy, moderate, or difficult?
+difficult
+3. Did you work on it mostly alone, or mostly with other people?
+alone
+4. How deeply do you feel you understand the material it covers (0%–100%)?
+70% 
+5. Which part(s) of the course you like the most so far?
+6. Which part(s) of the course you dislike the most so far?
+I think we need more time for class, there are too many content but limit time to get details about 
+how to implement it, Or a little bit more time for office hour

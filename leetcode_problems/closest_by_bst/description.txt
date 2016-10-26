@@ -1,0 +1,4 @@
+This problem is shown in my quiz 2, write a function that find the closest number in
+an array to a target number x by using the BST
+the tree structure is a buggy tree
+
