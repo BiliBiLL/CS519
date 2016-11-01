@@ -1,0 +1,41 @@
+Please answer time/space complexities for each problem in report.txt.
+
+[UPDATE]
+0. For each of the coding problems below:
+   (a) Describe an exhaustive solution, and analyze compleixty (might be exponential).
+   (b) Describe a greedy solution, and analyze complexity.
+   (c) Show a counterexample to the greedy solution.
+   (d) Theoretically, is the top-down solution faster, or the bottom-one one faster?
+   (e) Empirically, which one is faster? (Try some long random lists) 
+
+1. Unbounded Knapsack
+Q: What are the time and space complexities?
+	time: O(nw)
+	space: O(nw)
+
+2. [WILL BE GRADED] 
+   Bounded Knapsack
+Q: What are the time and space complexities?
+
+	time: O(NW * c)
+	space: O(NW)
+
+3. Longest (Strictly) Increasing Subsequence
+Q: What are the time and space complexities?
+	
+Debriefing (required!): --------------------------
+
+0. What's your name?
+	Zehuan Chen
+1. Approximately how many hours did you spend on this assignment?
+	1-2 hours per day
+2. Would you rate it as easy, moderate, or difficult?
+	pretty hard
+3. Did you work on it mostly alone, or mostly with other people?
+	I did it alone
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	75%
+5. Which part(s) of the course you like the most so far?
+	Homework review
+6. Which part(s) of the course you dislike the most so far?
+	None
