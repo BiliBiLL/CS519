@@ -1,0 +1,44 @@
+1. Topological order problem:
+  Time: On a graph of n vertices and m edges, the whole algorithm take O(m + n) time, because in first loop of my code, 
+	for each vertice, we go through with every neiborhood vertices that pointed to, so the total is m, and for each
+	 vertices, it took some statics running times, which takes O(1) and for total graph, it take O(n). So the 
+	total running time complexity take O(m+n).
+
+  Space: The algorithm just calculate with the edges related variables, so it will not take too much space for this 
+	 algorithm, the total is O(m)
+
+
+2. Viterbi algorithm:
+  Time: For this algorithm, there are a lot of different way to implement it, my way is to calculate the topological 
+	first, after I get the ordered list of vertices, I will solve the subproblem according to its adjacent edges.
+	So on a graph of n vertices and m edges, the time complexity need at least O(m + n) to do the topological ordering,
+	then solve a dynamic programming problem, similar to Longest Increasing Subsequence, it take O(m)
+	So the total will take O(m+n)
+
+3. Dijkstra's algorithm:
+  Time: On graph with n vertices and m edges, the time complexity is O(m + n^2) = O(n^2)
+  Space:
+
+
+Debriefing (required!): --------------------------
+
+0. What's your name?
+	Zehuan Chen
+1. Approximately how many hours did you spend on this assignment?
+	4 hours per day in this week
+2. Would you rate it as easy, moderate, or difficult?
+	These problems are very interesting but challenge
+3. Did you work on it mostly alone, or mostly with other people?
+	I did it mostly alone, duscuss with others sometimes
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	60%, I think some part is not clear in your class
+5. Which part(s) of the course you like the most so far?
+	projects
+6. Which part(s) of the course you dislike the most so far?
+	The quiz and exam T^T
+
+
+This section is intended to help us calibrate the homework assignments. 
+Your answers to this section will *not* affect your grade; however, skipping it
+will certainly do.
+ 
