@@ -1,0 +1,33 @@
+Please answer time/space complexities for each problem in report.txt.
+
+0. (a) Describe a greedy algorithm for LIS and show a counter example.
+	Find smallest number in the list, then find the second smallest number just bigger than the
+	first one.
+	Counter: "fgabcd"
+   (b) Describe an exhaustive algorithm for TSP and analyze complexity.
+	An exhaustive search of all possible paths would be guaranteed to find the shortest, 
+	but is computationally intractable for all but small sets of locations. For larger
+	 problems, optimization techniques are needed to intelligently search the solution space 
+	and find near-optimal solutions.
+	The complexity of this exhaustive method is O(n!), because when traveling to any node in the graph, 
+	the next step still have n-1 choice, and then can pick the optimal solution.
+ 
+ (1)	
+ Q: What are the time and space complexities?
+	For each opt[i] we need calculate the opt[j] which 0<j<i, so the total will be O(n^2) for my implementation.
+	For space complexity, only need O(n) for store the optimal solutions for each items and the items before it.
+
+0. What's your name?
+	Zehuan Chen
+1. Approximately how many hours did you spend on this assignment?
+	4 hours
+2. Would you rate it as easy, moderate, or difficult?
+	the lis is moderate, the TSP is difficult
+3. Did you work on it mostly alone, or mostly with other people?
+	alone
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	70
+5. Which part(s) of the course you like the most so far?
+	homework review
+6. Which part(s) of the course you dislike the most so far?
+	None
