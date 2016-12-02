@@ -1,0 +1,81 @@
+Hints for the Challenge Problem.
+
+1. best structure
+
+   overall, note this problem is very similar to, but harder than, 
+   number of binary search trees (Catalan) in hw5.
+   
+   similarity: you split a subproblem into (many pairs of) *two* smaller subproblems.
+   difference: unlike hw5, this problem depends on the sequence, not just n. 
+   	       so the subproblem will be over intervals [i, j] not just [i].
+
+* please use between-nucleotide indices:
+  
+   A C A G U
+  0 1 2 3 4 5
+    i     j
+ 
+  basically, nucleotide s_i is between indices i and i+1.
+
+* subproblem: opt[i, j] -- value of best structure for substring s_i .. s_{j-1}.
+  goal: opt[0, n]
+
+  this way the span length is j-i.
+  
+* recurrence: 
+  
+  four cases:
+  a) s_i and s_{j-1} can pair => reduce to opt[i+1, j-1] + 1
+  b) s_i is unpaired => reduce to opt[i+1, j]
+  c) s_j is unpaired => reduce to opt[i, j-1]
+  d) split into [i, k] and [k, j] with every split point k (i<k<j)
+     this last case is similar to hw5 number of binary search trees.
+    
+  [UPDATE] actually cases b) and c) are not needed; they are covered in d).
+
+  base cases:
+  
+  opt[i, i] = 0     # empty string
+  opt[i, i+1] = 0   # singleton
+
+* example: ACAGU, opt values below:
+
+       2
+      1 1
+     0 1 1
+    0 0 0 1   
+   A C A G U
+-------------------
+  0 1 2 3 4 5
+
+  these are the opt values for all non-trivial spans [i, j] (j-i>1). 
+  for example, opt[3, 5] = 1 ("GU") and opt[1,4] = 1 ("CAG").
+
+* topological order:
+  
+  there are many possible topological orders, but the most intuitive one
+  is to start with the shortest spans (length 2) and move to longer ones.
+  this is similar to TSP where the outer-most loop is on "size". 
+
+2. number of structures
+
+   similar to Catalan number, but again, it depends on the sequence, not just n.
+   simply replace the "max" operator above by the "+" operator (cf. Viterbi).
+
+   Caveat: the division into subproblems above (a-d) are not disjoint,
+   	   so there will be double-counting. you might need to do something clever.
+
+
+3. k-best structures
+   
+   you need to implement Algorithm 2 of Huang and Chiang 2005, but the idea is 
+   already mentioned in midterm/hw7's nbest question ("baby Dijkstra").
+
+   basically, you need to maintain the k-best values (instead of 1-best opt) 
+   for all spans [i, j]. 
+
+   for subproblem [i, j], you need to combine the k-best solutions to 
+   smaller subproblems [i-1, j+1], [i+1, j], [i, j-1], [i, k] and [k, j] for i<k<j.
+
+   this is basically k-way merging plus n-best.
+

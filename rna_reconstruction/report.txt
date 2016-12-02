@@ -1,0 +1,59 @@
+1. Given an RNA sequence, such as ACAGU, we can predict its secondary structure 
+   by tagging each nucleotide as (, ., or ). Each matching pair of () must be 
+   AU, GC, or GU (or their mirror symmetries: UA, GC, UG). 
+   We also assume pairs can _not_ cross each other. 
+
+   Analysis:
+	To implement this requirement, we need first find out the base cases and recursion formula, for opt[l,r], l and r 
+represents the left boundary and right boundary respectively, opt[l,r] means the optimal number of pairs have among the
+substring from l to r. when two element matches with each other.
+For example, the rna[l] and rna[r] matches, then we consider the content of opt[l+1,r-1], or using one split index browsing 
+through l to r and pick the max value of opt[l,k]+opt[k,r]. There are two base cases, when there is a singleton, whihc 
+is opt[i,i+1] = 0, besides, the empty is opt[i,i]=0.
+So for the time complexity, it totally needs at least O(n^3) to get the optimal value, with backtracing, it track the split
+point's index and whether their match or not. It will also took O(n^2)
+For the space complexity, opt is a defaultdict took O(n) and for back, which is also a defaultdictof tuple and 
+took O(2*n).
+
+2. Total number of all possible structures
+   Ananlysis:
+	For this problem, it is very similar to the homework n nodes bst all possible tree structures, there are two 
+kind of situations we can choose for each level, when l and r is not matches, then we try the i+1 and r, and get opt[l+1,r],
+or using a split index k through all possibilites among l+1 to r-1, i and k if rna[i] and rna[k-1] matches, we then get 
+all possible situation with specific k, calculate opt[l+1,k-1] * opt[k,r]. The final solution we need is opt[0,n+1], 
+
+There are also have two kind of base cases, which are opt[i,i+1]=1 and opt[i,i]=1.
+Time comlexity is O(n^2), because for each time choose opt[l,r] = opt[l+1,r], the l through all n element, and each time 
+the match found or not, the k will go through l to r. so total it took n*(n-1) + (n-1)*(n-2) + ... the total is O(n^2).
+For space complxity, I only use O(n) to allocate a defaultdict for tot(this is shown in my program) and some constant 
+calculation processing.
+
+3.3. k-best structures: output the 1-best, 2nd-best, ... kth-best structures.
+
+   >>> kbest("ACAGU", 3)
+   [(2, '((.))'), (1, '(...)'), (1, '.(.).')]
+   
+   The list must be sorted. 
+   [UPDATE] Arbitray tie-breaking is fine.
+
+
+
+Debriefing (required!): --------------------------
+
+0. What's your name?
+	Zehuan Chen
+1. Approximately how many hours did you spend on this assignment?
+	5 hours per day
+2. Would you rate it as easy, moderate, or difficult?
+	difficult
+3. Did you work on it mostly alone, or mostly with other people?
+	alone
+4. How deeply do you feel you understand the material it covers (0%–100%)? 
+	70%
+5. Which part(s) of the course you like the most so far?
+	hints
+6. Which part(s) of the course you dislike the most so far?
+	no
+This section is intended to help us calibrate the homework assignments. 
+Your answers to this section will *not* affect your grade; however, skipping it
+will certainly do.
