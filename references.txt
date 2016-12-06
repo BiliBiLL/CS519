@@ -1,0 +1,6 @@
+[KT] Kleinberg and Tardos, Algorithm Design, slides:
+http://www.cs.princeton.edu/~wayne/kleinberg-tardos/
+
+[DPV] Dasgupta, Papadimitriou, and Vazirani (DPV). Algorithms (full text online via berkeley) 
+[E] Jeff Erickson. Algorithms, Etc. (full text online) 
+How to Think Like a Computer Scientist: Learning Python (full text online)
